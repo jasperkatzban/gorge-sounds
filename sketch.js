@@ -182,6 +182,8 @@ function setup() {
   
   noCursor();
 
+  // necessary due to chrome enforcing against autoplay behavior
+  getAudioContext().resume(); 
   soundSourceArray.update();
   soundSourceArray.loop();
 }
