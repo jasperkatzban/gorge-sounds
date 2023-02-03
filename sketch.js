@@ -195,15 +195,15 @@ function draw() {
   fill("#F2F2E1");
   textFont('Averia Gruesa Libre');
   textAlign(CENTER);
-  textSize(15);
-  text("Welcome to the sounds of", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 30)
+  textSize(18);
+  text("The sounds of", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 37)
   textSize(26);
-  text("Robert H. Treman State Park, Upper Falls", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 63)
+  text("Robert H. Treman State Park, Upper Falls", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 67)
   textSize(15);
-  text("Click to enable sound, then put on your headphones.", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 110)
-  text("Move your cursor vertically to travel down the trail,", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 128)
+  text("Click to enable sound, then put on your headphones.", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 106)
+  text("Move your cursor vertically to travel down the trail,", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 126)
   text("and horizontally to pan your hearing around.", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 146)
-  text("Finally, take a deep breath, and close your eyes.", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 164)
+  text("Finally, take a deep breath, and close your eyes.", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 166)
 
   buff.fill("#F2F2E1");
   buff.rect(0, 0, BUFF_WIDTH, BUFF_HEIGHT, 5);
