@@ -193,10 +193,17 @@ function draw() {
   clear()
   background("#35432D");
   fill("#F2F2E1");
-  textAlign(CENTER);
-  textSize(18);
   textFont('Averia Gruesa Libre');
-  text("Robert H. Treman State Park, Upper Falls ", windowWidth/2, windowHeight /2 + BUFF_HEIGHT / 2 + 32)
+  textAlign(CENTER);
+  textSize(15);
+  text("Welcome to the sounds of", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 30)
+  textSize(26);
+  text("Robert H. Treman State Park, Upper Falls", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 63)
+  textSize(15);
+  text("Click to enable sound, then put on your headphones.", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 110)
+  text("Move your cursor vertically to travel down the trail,", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 128)
+  text("and horizontally to pan your hearing around.", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 146)
+  text("Finally, take a deep breath, and close your eyes.", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 164)
 
   buff.fill("#F2F2E1");
   buff.rect(0, 0, BUFF_WIDTH, BUFF_HEIGHT, 5);
@@ -233,7 +240,7 @@ function draw() {
   buff.ellipse(mouseXSmoothed - windowWidth / 2 + BUFF_WIDTH / 2, mouseYSmoothed - windowHeight / 2 + BUFF_HEIGHT / 2, 25, 25);
 
   // draw the buffer
-  image(buff, width / 2 - BUFF_WIDTH / 2, height / 2 - BUFF_HEIGHT / 2, BUFF_WIDTH, BUFF_HEIGHT);
+  image(buff, width / 2 - BUFF_WIDTH / 2, height / 2.5 - BUFF_HEIGHT / 2, BUFF_WIDTH, BUFF_HEIGHT);
   
   // update audio and draw points if enabled
   soundSourceArray.update();
