@@ -182,7 +182,7 @@ function setup() {
   
   noCursor();
 
-  // necessary due to chrome enforcing against autoplay behavior
+  // resume AudioContext in case it was stopped during load
   getAudioContext().resume(); 
   soundSourceArray.update();
   soundSourceArray.loop();
@@ -241,4 +241,9 @@ function draw() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+}
+
+// start audio if AudioContext has been paused at launch
+function mousePressed() {
+  userStartAudio();
 }
