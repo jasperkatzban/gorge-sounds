@@ -43,10 +43,10 @@ class SoundSource {
     this.x = x;
     this.y = y;
 
-    this.FL = new loadSound(filepath + "BL.wav");
-    this.FR = new loadSound(filepath + "BR.wav");
-    this.BR = new loadSound(filepath + "FR.wav");
-    this.BL = new loadSound(filepath + "FL.wav");
+    this.FL = new loadSound(filepath + "BL.mp3");
+    this.FR = new loadSound(filepath + "BR.mp3");
+    this.BR = new loadSound(filepath + "FR.mp3");
+    this.BL = new loadSound(filepath + "FL.mp3");
 
     this.graphicRadius = DEFAULT_SOUND_SOURCE_POINT_RADIUS;
     this.soundRadius = soundSourceAudioRadius;
