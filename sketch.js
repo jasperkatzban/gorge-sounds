@@ -33,7 +33,7 @@ let easingRot = 0.2;
 let cursorSVG;
 
 function getHeadAngle() {
-  return .8 * constrain(int(mouseX - windowWidth / 2), -BUFF_WIDTH / 2, BUFF_WIDTH / 2);
+  return 1.3 * constrain(int(mouseX - windowWidth / 2), -BUFF_WIDTH / 2, BUFF_WIDTH / 2);
 }
 
 class SoundSource {
@@ -179,11 +179,11 @@ function setup() {
   trailPath = trailElement.getElementsByTagName("path")[0]
   trailTotalLength = trailPath.getTotalLength();
   buff.noStroke()
-  
+
   noCursor();
 
   // resume AudioContext in case it was stopped during load
-  getAudioContext().resume(); 
+  getAudioContext().resume();
   soundSourceArray.update();
   soundSourceArray.loop();
 }
@@ -196,14 +196,14 @@ function draw() {
   textFont('Averia Gruesa Libre');
   textAlign(CENTER);
   textSize(18);
-  text("The sounds of", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 37)
+  text("The sounds of", windowWidth / 2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 37)
   textSize(26);
-  text("Robert H. Treman State Park, Upper Falls", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 67)
+  text("Robert H. Treman State Park, Upper Falls", windowWidth / 2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 67)
   textSize(15);
-  text("Click to enable sound, then put on your headphones.", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 106)
-  text("Move your cursor vertically to travel down the trail,", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 126)
-  text("and horizontally to pan your hearing around.", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 146)
-  text("Finally, take a deep breath, and close your eyes.", windowWidth/2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 166)
+  text("Click to enable sound, then put on your headphones.", windowWidth / 2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 106)
+  text("Move your cursor vertically to travel down the trail,", windowWidth / 2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 126)
+  text("and horizontally to pan your hearing around.", windowWidth / 2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 146)
+  text("Finally, take a deep breath, and close your eyes.", windowWidth / 2, windowHeight / 2.5 + BUFF_HEIGHT / 2 + 166)
 
   buff.fill("#F2F2E1");
   buff.rect(0, 0, BUFF_WIDTH, BUFF_HEIGHT, 5);
@@ -223,12 +223,12 @@ function draw() {
   let loc = trailPath.getPointAtLength(distance);
 
   let headAngle = getHeadAngle();
-  
+
   buff.fill("#607A79");
   buff.ellipse(loc.x, loc.y, 5, 5);
   buff.translate(loc.x, loc.y);
   buff.rotate(radians(headAngle))
-  
+
   buff.imageMode(CENTER);
   buff.image(cursorIMG, 0, -58);
   buff.imageMode(CORNER);
@@ -241,7 +241,7 @@ function draw() {
 
   // draw the buffer
   image(buff, width / 2 - BUFF_WIDTH / 2, height / 2.5 - BUFF_HEIGHT / 2, BUFF_WIDTH, BUFF_HEIGHT);
-  
+
   // update audio and draw points if enabled
   soundSourceArray.update();
 }
